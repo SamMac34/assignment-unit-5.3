@@ -14,13 +14,13 @@ console.log('***** Music Collection *****')
 // Create a new object having the above properties
 // Add the new object to the end of the collection array
 // Return the newly created object
-// Test the addToCollection function:
 
+// Test the addToCollection function:
 // Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
 // Console.log each album as added using the returned value.
 // After all are added, console.log the collection array.
-// Add a function named showCollection. This function should:
 
+// Add a function named showCollection. This function should:
 // Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
 // Console.log the number of items in the array.
 // Loop over the array and console.log each album's information formatted like: TITLE by ARTIST, published in YEAR.
@@ -48,5 +48,18 @@ function addToCollection( title, artist, yearPublished ){
     collection.push( album );
     return album;
 }
-console.log( 'Testing addToCollection', addToCollection( 'Palomino', 'TrampledByTurtles', 2010 ));
-console.log( 'My collection is:', collection );
+
+//Test addToCollection function:
+console.log( 'Testing addToCollection' );
+
+console.log( addToCollection( 'Palomino', 'Trampled by Turtles', 2010 ));
+console.log( addToCollection( 'Trouble', 'Trampled by Turtles', 2007 ));
+console.log( addToCollection( 'Revolver', 'The Beatles', 1966 ));
+console.log( addToCollection( 'Sgt. Peppers Lonely Hearts Club', 'The Beatles', 1966 ));
+console.log( addToCollection( 'Grateful Dead', 'Grateful Dead', 1971));
+console.log( addToCollection( 'Californication', 'Red Hot Chili Peppers', 1999));
+
+console.log( 'My collection is now:', collection );
+//end test
+
+
