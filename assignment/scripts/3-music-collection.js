@@ -48,9 +48,9 @@ console.log( 'My collection is now:', collection );
 // Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
 // Console.log the number of items in the array.
 // Loop over the array and console.log each album's information formatted like: TITLE by ARTIST, published in YEAR.
-function showCollection(array) {
+function showCollection( array ){
     console.log( 'There are', array.length - 1, 'items in the array' );
-    for( let album of array ) {
+    for( let album of array ){
         console.log( `${album.title} by ${album.artist} published in ${album.yearPublished}` );
     }
 }
@@ -63,9 +63,9 @@ showCollection(collection);
 // Create an array to hold any results, empty to start
 // Loop through the collection and add any objects with a matching artist to the array.
 // Return the array with the matching results. If no results are found, return an empty array.
-function findByArtist(artist) {
+function findByArtist( artist ){
     let artistArray = [];
-    for( let album of collection ) {
+    for( let album of collection ){
         if( artist === album.artist ){
             artistArray.push( album );
         }
