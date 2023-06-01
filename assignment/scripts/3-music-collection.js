@@ -63,4 +63,16 @@ showCollection(collection);
 // Create an array to hold any results, empty to start
 // Loop through the collection and add any objects with a matching artist to the array.
 // Return the array with the matching results. If no results are found, return an empty array.
+function findByArtist(artist) {
+    let artistArray = [];
+    for( let album of collection ) {
+        if( artist === album.artist ){
+            artistArray.push( album );
+        }
+    }
+    return artistArray;
+}
+
 // Test the findByArtist function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
+console.log( 'in findByArtist - expect 2 matches', findByArtist('The Beatles'));
+console.log( 'in findByArtist - expect empty', findByArtist( 'Dave Brubeck'));
